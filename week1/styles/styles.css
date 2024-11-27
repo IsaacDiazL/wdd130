@@ -6,49 +6,82 @@
   --border: 1px solid rgb(0 0 0 / 0.1);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
     background-color: var(--heading-background-color);
     padding: 10px;
   }
+
   nav a {
     color: white;
     display: block;
-    padding: 20px;
+    padding: 10px;
   }
+
   h1 {
     color: var(--heading-text-color);
+    padding: 20px;
   }
+
   main img {
     width: 150px;
     height: auto;
-    border: var(--border);
+    float: right;
+    margin: 0 0 1rem 3rem;
+    box-shadow: 0 0 20px darkgray;
+    border: 1px solid darkgray;
     padding: 2px;
-    box-shadow: 0 0 30px gray;
   }
+
   p {
     padding: var(--padding);
+  }
+
+  main p{
+    padding-bottom: 3rem;
   }
   main {
     max-width: 840px;
   }
+
   aside {
-    position: relative;
     width: 20rem;
-    margin: 1rem;
-    border: var(--border); /* 1️⃣ */
-    padding: 1rem;
-    background-color: #eeeeee;
-    color: #333;
     text-align: center;
+    position: relative;
   }
+
   aside img {
-    width: 200px;
+    width: 250px;
     height: auto;
     box-shadow: 0 0 20px gray;
   }
-  p { padding: 0;}
+
+  aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+  }
+
   footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
   }
+
+ li {
+    padding: 6px;
+ }
+
+/* Class selectors */
+.box {
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  padding: 1rem;
+  background-color: #ddd;
+  color: #000;
+}
