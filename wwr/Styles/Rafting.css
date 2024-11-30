@@ -1,0 +1,90 @@
+:root{
+    --primary-color: #437C90;
+    --secondary-color: #255957;
+    --accent1-color: #EEEBD3;
+    --accent2-color: #A98743; /* Color Pallette https://coolors.co/437c90-255957-eeebd3-a98743 */
+
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   max-width: 900px;
+}
+
+h1 {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--accent1-color);
+  }
+
+p {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1em;
+  }
+
+main {
+  padding: 1.5em;
+  background-color: var(--accent1-color);
+}
+
+.sociallinks a {
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 10%;
+  background-color: rgba(0, 0, 0, 0.623);
+  width: 100%;
+  text-align: center;
+}
+
+.hero article {
+  position: absolute;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.699);
+  bottom: 10%;
+  left: 10%;
+  padding: 15px;
+}
+
+.hero article img {
+  width: 150px;
+  float: right;
+}
+
+.hero article p {
+  color: #EEEBD3;
+}
+
+header {
+  background-color: var(--accent2-color);
+  padding: 10px;
+}
+
+section {
+  margin-top: 1rem;
+  padding: 5px;
+  background-color: darkgray;
+  border: gray solid 1px;
+}
+footer {
+  background-color: var(--primary-color);
+  padding: 1em;
+}
