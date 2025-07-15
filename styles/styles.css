@@ -1,20 +1,25 @@
+:root {
+  --background-color: darkblue;
+  --font-type: 'times new roman', serif;
+  --padding: 10px;
+}
+
 nav {
-  background-color: darkblue;
-  padding: 10px;
+  background-color: var(--background-color);
+  padding: var(--padding);
 }
 nav a {
   color: white;
   display: block;
-  padding: 20px;
+  padding: var(--padding);
 }
 h1 {
-  color: darkblue;
+  color: var(--background-color);
 }
 main img {
   width: 150px;
   height: auto;
   border: 1px solid rgb(0 0 0 / 0.5);
-  padding: 2px;
   box-shadow: 0 0 30px gray;
 }
 p {
@@ -22,6 +27,7 @@ p {
 }
 main {
   max-width: 840px;
+  font-family: var(--font-type);
 }
 aside{
   width: 20rem;
