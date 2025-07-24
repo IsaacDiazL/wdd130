@@ -1,6 +1,6 @@
 :root {
     --primary-color: #E4EBEB; /* Anti flash white */
-    --secondary-color: #B18433; /* Dark goldenrod */   
+    --secondary-color: #b88e1d; /* Dark goldenrod */   
     --accent1-color: #183149; /* Dark blue */
     --accent2-color: #B2DCEC; /* Light blue */
     --accent3-color: #76CCE6; /* Sky blue */
@@ -19,6 +19,39 @@ body {
 header, main, footer {
     width: 840px;
     margin: 0 auto;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--accent2-color);
+}
+header img {
+    width: 150px;
+    justify-self: end;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.315);
+    border: 1px solid rgb(180, 180, 180);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid rgb(131, 131, 131);
+    width: 100px;
+    color: var(--accent1-color);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.315);
+}
+nav a:hover {
+    text-decoration: underline;
+    background-color: #b4b4b4;
 }
 h1, h2 {
     font-family: var(--heading-font);
@@ -62,4 +95,15 @@ article {
     float: right;
     border: rgb(102, 108, 197) solid 2px;
     margin: 10px;
+}
+.history {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
+#history-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
 }
