@@ -1,11 +1,13 @@
 :root {
-    --primary-color: #E4EBEB; /* Anti flash white */
-    --secondary-color: #b88e1d; /* Dark goldenrod */   
-    --accent1-color: #183149; /* Dark blue */
-    --accent2-color: #B2DCEC; /* Light blue */
-    --accent3-color: #76CCE6; /* Sky blue */
+    --primary-color: rgb(77, 89, 102); 
+    --secondary-color: rgba(36, 36, 36, 0.3); 
+    --accent1-color: #3d8034; 
+    --accent2-color: #85a2ad;
+    --text-color: #d2fcff; 
+    --text-color2: rgb(255, 255, 255);
     --heading-font: "Amarante", serif;
     --body-font: "Slabo 27px", serif;
+    --box-shadow: 5px 5px 10px 2px rgba(0, 0, 1, 0.5);
 }
 * {
     box-sizing: border-box;
@@ -14,7 +16,11 @@
 }
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--text-color2);
+    background-image: url("/wwr/images/waterfall.webp");
+    background-size: cover;
+    background-position: top;
+    backdrop-filter: blur(5px) brightness(0.7);
 }
 header, main, footer {
     width: 840px;
@@ -23,12 +29,12 @@ header, main, footer {
 header {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 20px;
+    padding: 15px;
     align-items: center;
-    border-bottom: 1em solid var(--accent1-color);
-    border-radius: 0 0 10px 10px;
+    border-bottom: 1em solid var(--accent2-color);
+    border-radius: 0 0 20px 20px;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
-    background-color: var(--accent2-color) ;
+    background-color: var(--primary-color) ;
 }
 header img {
     width: 150px;
@@ -45,8 +51,10 @@ nav a {
     padding: 5px;
     background-color: #ffffff;
     border: 1px solid rgb(131, 131, 131);
+    border-radius: 5px 5px 10px 40px;
     width: 100px;
-    color: var(--accent1-color);
+    color: rgb(102, 53, 13);
+    font-weight: 700;
     text-align: center;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
 }
@@ -56,7 +64,8 @@ nav a:hover {
 }
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--secondary-color);
+    color: var(--text-color);
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 nav, p, section, article {
     margin: 16px;
@@ -81,6 +90,7 @@ nav, p, section, article {
     width: 100%;
     display: block;
     height: auto;
+    border-radius: 10px;
 }
 .hero h1 {
     position: absolute;
@@ -88,20 +98,20 @@ nav, p, section, article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: rgba(24, 49, 73, 0.7);
-    color: var(--primary-color);
+    background-color: rgba(5, 9, 27, 0.7);
+    color: var(--text-color2);
 }
 article {
     position: absolute;
-    background-color: rgba(15, 15, 54, 0.534);
+    background-color: rgba(0, 0, 0, 0.534);
     bottom: 20px;
     height: 300px;
-    color: var(--primary-color);
+    color: var(--text-color2);
 }
 .hero article img {
     width: 150px;
     float: right;
-    box-shadow: 1px 1px 20px rgba(190, 190, 190, 0.432);
+    box-shadow: var(--box-shadow);
     margin: 10px;
 }
 .history {
@@ -135,6 +145,9 @@ article {
 footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px 10px 0 0;
 }
 footer p {
     grid-column: 2/3;
@@ -162,11 +175,10 @@ footer nav a {
 .contact {
     padding: 1rem 2rem;
     margin: 1rem auto;
-    border-top: 1em solid var(--secondary-color);
+    border-top: 1em solid var(--accent1-color);
     border-radius: 10px;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
-    color: black;
-    background-color: honeydew;
+    box-shadow: var(--box-shadow);
+    background-color: var(--secondary-color);
 }
 .contact aside img {
     margin-right: 10px;
@@ -184,6 +196,7 @@ footer nav a {
 }
 .teamFrame figcaption {
     font-weight: 700;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0.2);
 }
 .centerText {
     text-align: center;
@@ -192,12 +205,13 @@ footer nav a {
 form {
     width: 500px;
     margin: 0 auto;
-    background-color: rgba(240, 240, 240, 0.767);
+    background-color: rgba(236, 236, 236, 0.767);
     border-radius: 5px;
     padding: 1rem 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    border: 2px solid rgb(206, 206, 206);
+    border: 2px solid rgb(148, 148, 148);
+    color: black;
 }
 form fieldset, form div, form button {
     padding: 1rem;
@@ -219,7 +233,7 @@ fieldset label {
 margin-top: 5px;
 }
 #fullname, #email  {
-    border: 2px solid rgb(206, 206, 206);
+    border: 2px solid rgb(172, 172, 172);
 }
 .personalInfo input {
     padding: 0.4rem;
@@ -241,7 +255,7 @@ margin-top: 5px;
 }
 fieldset textarea {
     width: 100%;
-    border: 2px solid rgb(206, 206, 206);
+    border: 2px solid rgb(172, 172, 172);
 }
 form button {
     display: block;
@@ -250,13 +264,13 @@ form button {
     font-size: 15px;
     font-weight: 700;
     background-color: var(--accent1-color);
-    color: var(--primary-color);
-    border: 2px solid rgb(84, 122, 226);
+    color: var(--accent2-color);
+    border: 2px solid rgb(59, 82, 57);
 }
 form button:hover {
-    background-color: rgb(35, 117, 14);
-    color: var(--primary-color);
-    border: 2px solid rgb(118, 224, 69);
+    background-color: rgb(22, 109, 0);
+    color: var(--text-color);
+    border: 2px solid rgb(74, 218, 60);
 }
 .wireFrame {
     text-decoration: none;
